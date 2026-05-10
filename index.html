@@ -85,6 +85,7 @@
       display: flex; align-items: center; gap: 12px;
       border-bottom: 1px solid var(--br);
       position: sticky; top: 0; z-index: 10;
+      justify-content: space-between;
     }
     .back-btn {
       background: none; border: none; color: var(--mu); cursor: pointer;
@@ -521,15 +522,13 @@
 <!-- ════ QUIZ ════ -->
 <div id="screen-quiz" class="screen">
   <div class="quiz-top">
-    <button class="back-btn" id="quiz-back">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <path d="M14 17L8 11L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
     <div class="prog-wrap">
       <div class="prog-txt" id="prog-txt">1 / 43</div>
       <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
     </div>
+    <button class="hamburger-btn-sm" id="hamburger-quiz" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 
   <div class="quiz-body">
@@ -629,12 +628,10 @@
 <!-- ════ EIGO ════ -->
 <div id="screen-eigo" class="screen">
   <div class="eigo-top">
-    <button class="back-btn" id="eigo-back">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <path d="M14 17L8 11L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
     <h2>英コミュ</h2>
+    <button class="hamburger-btn-sm" id="hamburger-eigo" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="eigo-body" id="eigo-body"></div>
 </div>
