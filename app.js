@@ -33,7 +33,7 @@ function shuffle(arr) {
 }
 
 function normalize(s) {
-  return s.toLowerCase().replace(/\s+/g, ' ').trim();
+  return s.toLowerCase().replace(/\s+/g, ' ').trim().replace(/[.?!]+$/, '');
 }
 
 function assembleSentence(q) {

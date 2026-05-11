@@ -17,10 +17,25 @@
 
 4. 手順1で確認した EIGO_SENTENCES の形式に合わせて `data.js` の末尾に追加する。
 
-5. 同じ英文から英検3級以上の語彙を抽出して `vocab/data.js` の WORDS 末尾に追加する：
-   - be動詞・超基本語（a/the/in/on/is等）は除く
-   - すでに vocab/data.js にある単語は追加しない
-   - レベル目安：3級=中学応用語、準2級=高校基本語、2級=高校発展語、準1級=それ以上
+5. 全英文から語彙を **2段階** で抽出して `vocab/data.js` の WORDS 末尾に追加する：
+
+   **【第1段階：全単語を洗い出す】**
+   全文から登場する単語・熟語を品詞を問わず全てリストアップする。
+   この段階では絞り込まず、とにかく全て出す。
+   ただし以下は除外：
+   - be動詞（is/are/was/were/be/been/being）
+   - 冠詞・前置詞・接続詞・代名詞（a/the/in/on/of/and/but/to/for/it/they/we/this/that等）
+   - 数字・固有名詞
+
+   **【第2段階：英検3級以上に絞り込む】**
+   第1段階のリストから、英検レベルが3級以上の語彙のみを残す。
+   - 3級（中学応用語）：endanger, protect, destroy など
+   - 準2級（高校基本語）：extinct, pollution, habitat など
+   - 2級（高校発展語）：sanctuary, penalty, cooperate など
+   - 準1級以上（大学入試レベル）：overfishing, exfiltrate など
+
+   すでに vocab/data.js にある単語は追加しない。
+   各単語に `example` として使われている英文（EIGO_SENTENCESの該当文）を入れる。
 
 6. `git add data.js vocab/data.js && git commit -m "eigo: add sentences and words"`
 

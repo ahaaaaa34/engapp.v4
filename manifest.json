@@ -1,7 +1,7 @@
 {
-  "name": "英語時制マスター STEP 01",
-  "short_name": "時制マスター",
-  "description": "STEP 01 時制 — 大学入試英語の時制問題演習PWA",
+  "name": "英語態・助動詞マスター STEP 02-03",
+  "short_name": "態・助動詞マスター",
+  "description": "STEP 02-03 態・助動詞 — 大学入試英語の文法問題演習PWA",
   "start_url": "./",
   "display": "standalone",
   "orientation": "portrait-primary",

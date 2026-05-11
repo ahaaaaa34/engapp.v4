@@ -8,6 +8,25 @@
 
 2. `/new` スキルの手順に従ってローカルに作業フォルダを作成する（フォルダ名は自動でtmpworkとする）。
 
+   **重要：** `tmpwork` が既存でも必ず以下の2ファイルを空テンプレートで上書きする（前回のデータを引き継がない）：
+
+   **data.js:**
+   ```js
+   const QUIZ_DATA = {
+     frames: [],
+     exA: [],
+     exB: [],
+     exC: []
+   };
+
+   const EIGO_SENTENCES = [];
+   ```
+
+   **vocab/data.js:**
+   ```js
+   export const WORDS = [];
+   ```
+
 3. 渡された画像を1枚ずつ Read ツールで読み、内容を判定する：
    - FRAME / Exercise A / B / C の問題形式 → `/grammar` スキルの手順で `data.js` に追加
    - 英文・日本語訳が並んでいる長文形式 → `/eigo` スキルの手順で `data.js` と `vocab/data.js` に追加
